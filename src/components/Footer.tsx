@@ -1,6 +1,10 @@
 import { FaFacebookF, FaInstagram, FaYoutube, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
-export function Footer() {
+interface FooterProps {
+  onOpenContact: () => void;
+}
+
+export function Footer({ onOpenContact }: FooterProps) {
   return (
     <footer className="bg-primary pt-20 pb-10 text-primary-foreground">
       <div className="mx-auto max-w-7xl px-6">
@@ -10,10 +14,10 @@ export function Footer() {
           <div className="md:col-span-4">
             <div className="flex items-center gap-2 mb-6">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent text-primary">
-                <span className="  text-2xl italic font-bold">N</span>
+                <span className="text-2xl italic font-bold">N</span>
               </div>
               <div className="flex flex-col">
-                <span className="  text-xl font-bold leading-none text-white">
+                <span className="text-xl font-bold leading-none text-white">
                   Nada Brahma
                 </span>
                 <span className="text-[0.65rem] font-medium uppercase tracking-widest text-accent">
@@ -39,19 +43,23 @@ export function Footer() {
 
           {/* Quick Links */}
           <div className="md:col-span-2">
-            <h4 className="  text-lg font-bold text-white mb-6">Quick Links</h4>
+            <h4 className="text-lg font-bold text-white mb-6">Quick Links</h4>
             <ul className="space-y-3 text-sm text-white/70">
               <li><a href="#about" className="hover:text-accent transition-colors">About Us</a></li>
               <li><a href="#gurus" className="hover:text-accent transition-colors">Our Gurus</a></li>
               <li><a href="#gallery" className="hover:text-accent transition-colors">Gallery</a></li>
               <li><a href="#workshops" className="hover:text-accent transition-colors">Workshops</a></li>
-              <li><a href="#contact" className="hover:text-accent transition-colors">Enroll Now</a></li>
+              <li>
+                <button onClick={onOpenContact} className="hover:text-accent transition-colors">
+                  Enroll Now
+                </button>
+              </li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div className="md:col-span-3">
-            <h4 className="  text-lg font-bold text-white mb-6">Contact Us</h4>
+            <h4 className="text-lg font-bold text-white mb-6">Contact Us</h4>
             <ul className="space-y-4 text-sm text-white/70">
               <li className="flex gap-3">
                 <FaMapMarkerAlt className="text-accent shrink-0 text-base mt-0.5" />

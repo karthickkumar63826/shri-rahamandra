@@ -8,10 +8,13 @@ const navLinks = [
   { name: "Gurus", href: "#gurus" },
   { name: "Gallery", href: "#gallery" },
   { name: "Workshops", href: "#workshops" },
-  { name: "Contact", href: "#contact" },
 ];
 
-export function Navbar() {
+interface NavbarProps {
+  onOpenContact: () => void;
+}
+
+export function Navbar({ onOpenContact }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -36,11 +39,10 @@ export function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
         <a href="#home" className="flex items-center gap-2 group">
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-accent shadow-lg transition-transform group-hover:scale-105">
-            {/* Simple logo mark */}
-            <span className="  text-2xl italic font-bold">N</span>
+            <span className="text-2xl italic font-bold">N</span>
           </div>
           <div className="flex flex-col">
-            <span className="  text-xl font-bold leading-none tracking-tight text-primary">
+            <span className="text-xl font-bold leading-none tracking-tight text-primary">
               Nada Brahma
             </span>
             <span className="text-[0.65rem] font-medium uppercase tracking-widest text-accent">
@@ -62,17 +64,25 @@ export function Navbar() {
                 </a>
               </li>
             ))}
+            <li>
+              <button
+                onClick={onOpenContact}
+                className="text-sm font-medium text-foreground/80 hover:text-accent transition-colors relative after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-accent after:transition-all hover:after:w-full"
+              >
+                Contact
+              </button>
+            </li>
           </ul>
         </nav>
 
         {/* Enroll Button Desktop */}
         <div className="hidden md:block">
-          <a
-            href="#contact"
+          <button
+            onClick={onOpenContact}
             className="rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:bg-primary/90"
           >
             Enroll Now
-          </a>
+          </button>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -105,14 +115,21 @@ export function Navbar() {
                   </a>
                 </li>
               ))}
+              <li>
+                <button
+                  onClick={() => { setIsMobileMenuOpen(false); onOpenContact(); }}
+                  className="block w-full text-left text-lg font-medium text-foreground hover:text-accent"
+                >
+                  Contact
+                </button>
+              </li>
               <li className="pt-2">
-                <a
-                  href="#contact"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                <button
+                  onClick={() => { setIsMobileMenuOpen(false); onOpenContact(); }}
                   className="block w-full rounded-full bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground shadow-md"
                 >
                   Enroll Now
-                </a>
+                </button>
               </li>
             </ul>
           </motion.nav>

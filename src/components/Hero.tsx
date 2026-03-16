@@ -1,6 +1,10 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 
-export function Hero() {
+interface HeroProps {
+  onOpenContact: () => void;
+}
+
+export function Hero({ onOpenContact }: HeroProps) {
   const { scrollY } = useScroll();
   const yText = useTransform(scrollY, [0, 500], [0, 150]);
   const yBg = useTransform(scrollY, [0, 500], [0, 50]);
@@ -17,7 +21,6 @@ export function Hero() {
           alt=""
           className="w-full h-full object-cover"
         />
-        {/* Gradient overlay to ensure text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background"></div>
       </motion.div>
 
@@ -36,7 +39,7 @@ export function Hero() {
             <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-accent">
               Welcome to the Divine Sound
             </h2>
-            <h1 className="mb-6   text-5xl leading-tight text-primary md:text-7xl">
+            <h1 className="mb-6 text-5xl leading-tight text-primary md:text-7xl">
               Preserving <br />
               <span className="italic text-accent">Classical</span> <br />
               Excellence.
@@ -46,13 +49,13 @@ export function Hero() {
             </p>
 
             <div className="flex flex-col items-center gap-4 sm:flex-row md:justify-start">
-              <a
-                href="#contact"
+              <button
+                onClick={onOpenContact}
                 className="group relative overflow-hidden rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground shadow-xl shadow-primary/20 transition-all hover:scale-105 hover:shadow-2xl active:scale-95"
               >
                 <span className="relative z-10">Start Your Journey</span>
                 <div className="absolute inset-0 z-0 bg-gradient-to-r from-primary via-accent to-primary opacity-0 transition-opacity group-hover:opacity-20" />
-              </a>
+              </button>
               <a
                 href="#about"
                 className="rounded-full border-2 border-border bg-transparent px-8 py-4 text-sm font-semibold text-foreground transition-all hover:border-accent hover:text-accent"
@@ -71,10 +74,8 @@ export function Hero() {
           className="relative flex-1 flex justify-center"
         >
           <div className="relative h-[400px] w-[400px] md:h-[600px] md:w-[600px]">
-            {/* Animated Glow Behind */}
             <div className="absolute inset-0 rounded-full bg-accent/20 blur-3xl animate-pulse" />
 
-            {/* Floating Veena Image */}
             <motion.img
               animate={{
                 y: [-10, 10, -10],
