@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Music, Sparkles, Drum, Palette, BrainCircuit, Globe, Award, Users, GraduationCap, CalendarDays } from "lucide-react";
+import { PageHero } from "@/components/PageHero";
 
 const courses = [
   {
@@ -55,41 +56,11 @@ export function About() {
   return (
     <section id="about" className="overflow-hidden bg-background">
 
-      {/* ── Hero Banner ─────────────────────────────────────── */}
-      <div className="relative bg-primary overflow-hidden py-28 px-6">
-        {/* Decorative rings */}
-        <div className="absolute -top-24 -right-24 h-96 w-96 rounded-full border border-accent/20 opacity-60" />
-        <div className="absolute -top-12 -right-12 h-64 w-64 rounded-full border border-accent/30 opacity-40" />
-        <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full border border-white/10" />
-
-        <div className="relative mx-auto max-w-7xl text-center">
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-xs font-bold uppercase tracking-[0.3em] text-accent mb-5"
-          >
-            Our Story
-          </motion.p>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-6xl font-bold text-primary-foreground leading-tight mb-6"
-          >
-            A Heritage{" "}
-            <span className="italic text-accent">Beyond Time</span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-primary-foreground/70 text-lg max-w-2xl mx-auto"
-          >
-            Where the Five Elements meet Fine Arts — a sanctuary where tradition flows like the sacred springs of the Kaveri.
-          </motion.p>
-        </div>
-      </div>
+      <PageHero
+        eyebrow="Our Story"
+        title={<>A Heritage <span className="italic text-accent">Beyond Time</span></>}
+        description="Where the Five Elements meet Fine Arts — a sanctuary where tradition flows like the sacred springs of the Kaveri."
+      />
 
       {/* ── Stats Row ────────────────────────────────────────── */}
       <div className="bg-accent">
