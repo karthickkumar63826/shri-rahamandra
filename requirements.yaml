@@ -1,0 +1,17 @@
+packages:
+  "framer-motion": "Complex animations, scroll reveals, and layout transitions"
+  "react-icons": "Extensive icon library for the bento grid and footer"
+  "react-hook-form": "Form state management for the enquiry form"
+  "@hookform/resolvers": "Zod integration for form validation"
+
+images:
+  - path: "artifacts/classical-music-academy/public/images/veena-ornament.png"
+    description: "Elegant golden silhouette illustration of a classical Indian Veena string instrument on a transparent background, highly detailed, premium, vector style"
+    aspect_ratio: "1:1"
+  - path: "artifacts/classical-music-academy/public/images/hero-bg.png"
+    description: "Subtle elegant classical Indian mandala geometric pattern texture, cream and very faint gold, seamless premium background, low contrast"
+    aspect_ratio: "16:9"
+
+notes:
+  - Webhook URL for form submissions accepts POST requests with mode 'no-cors'
+  - The app is a single-page scrolling site, sections use ID anchoring for navigation
