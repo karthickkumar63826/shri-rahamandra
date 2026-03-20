@@ -4,33 +4,33 @@ import { Star, Quote } from "lucide-react";
 const reviews = [
   {
     id: 1,
-    name: "Ananya S.",
-    course: "Vocal Intermediate",
-    text: "The dedication of the gurus here is unparalleled. I've seen massive improvement in my gamakas and sruti alignment within just 6 months.",
+    name: "Praha Sri",
+    course: "Harmonious Learning Experience",
+    text: "This academy is the perfect place to learn music, offering a conducive environment and expert guidance to nurture your musical talents.",
   },
   {
     id: 2,
-    name: "Vikram R.",
-    course: "Mridangam Beginner",
-    text: "Starting from scratch was intimidating, but the structured curriculum and patient teaching made it incredibly rewarding. Highly recommend!",
+    name: "Aruna Dhanasekar",
+    course: "Veenai Learning",
+    text: "I have been learning veenai under srividhya mam. It feels so nice to learn because of her patience and clear teaching. It is such a great place to learn veenai under srividhya mam.",
   },
   {
     id: 3,
-    name: "Meera K.",
-    course: "Veena Advanced",
-    text: "The masterclasses with visiting artists provide such deep insights into advanced techniques. This academy is truly a temple of learning.",
+    name: "Dr Divya Peds",
+    course: "Musical Class",
+    text: "A very dedicated and sincere teacher. Madam takes care that kids learn music and enjoy the classes as well.. homely environment and a friendly teacher.. I highly recommend",
   },
   {
     id: 4,
-    name: "Rahul T.",
+    name: "Sharmila Rajendran",
     course: "Violin",
-    text: "Excellent ambiance, traditional yet modern teaching methods. The annual performances give students great exposure and confidence.",
+    text: "A place with homely look, mentors feel like friends and finnally students can learn and enjoy the classes very much.",
   },
   {
     id: 5,
-    name: "Deepa N.",
-    course: "Vocal Beginner",
-    text: "I joined as an adult beginner. The supportive environment and the focus on strong fundamentals have made my journey beautiful.",
+    name: "Akila Muthuvelu",
+    course: "Classic Music",
+    text: "Learnt and gained musical knowledge from the reputed Sri Vidya mam who has great musical knowledge and she is trainer of passionate singers. Thankyou mam for the knowledge that you gave and dedication towards classical music",
   },
 ];
 
