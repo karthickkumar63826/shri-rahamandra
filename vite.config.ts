@@ -5,7 +5,7 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "/shri-rahamandra/",
+  base: process.env.NODE_ENV === "production" ? "/" : "/shri-rahamandra/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
