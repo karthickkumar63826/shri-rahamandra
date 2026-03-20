@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { FaCheckCircle } from "react-icons/fa";
 
-const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbzZFyqd_EUDwtHGIlC_gzhqHpejnYXcr3Y7Cuz-dEDJ0l-g9hTAWHIDs-ciiIjgIZGH/exec";
+const WEBHOOK_URL = "YOUR_NEW_WEB_APP_URL_HERE";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -80,6 +80,16 @@ export function ContactForm() {
               <div>
                 <h4 className="font-bold text-accent">Term Details</h4>
                 <p className="text-sm text-primary-foreground/80 mt-1">Next academic term begins in exactly 3 weeks. Classes are held bi-weekly.</p>
+              </div>
+              <div className="pt-4 border-t border-white/10 space-y-3 text-sm text-primary-foreground/70">
+                <p className="flex items-start gap-2">
+                  <span className="text-accent mt-0.5">📍</span>
+                  Building No.108/4, Near Akilandeshwari Kovil, North Car Street, Thiruvanaikoil, Trichy - 620005
+                </p>
+                <p className="flex items-center gap-2">
+                  <span className="text-accent">📞</span>
+                  <a href="tel:+917411819757" className="hover:text-accent transition-colors">+91 74118 19757</a>
+                </p>
               </div>
             </div>
           </div>

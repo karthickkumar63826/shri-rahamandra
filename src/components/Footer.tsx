@@ -19,7 +19,7 @@ export function Footer({ onOpenContact }: FooterProps) {
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-bold leading-none text-white">
-                  Nada Brahma
+                  SRI RAHAMANTARA
                 </span>
                 <span className="text-[0.65rem] font-medium uppercase tracking-widest text-accent">
                   Music Academy
@@ -65,15 +65,15 @@ export function Footer({ onOpenContact }: FooterProps) {
             <ul className="space-y-4 text-sm text-white/70">
               <li className="flex gap-3">
                 <FaMapMarkerAlt className="text-accent shrink-0 text-base mt-0.5" />
-                <span>123 Music Street, Cultural District<br />Chennai, Tamil Nadu - 600001</span>
+                <span>Building No.108/4, Near Akilandeshwari Kovil,<br />North Car Street, Thiruvanaikoil,<br />Trichy - 620005, Tamil Nadu</span>
               </li>
               <li className="flex gap-3 items-center">
                 <FaPhoneAlt className="text-accent shrink-0" />
-                <span>+91 98765 43210</span>
+                <a href="tel:+917411819757" className="hover:text-accent transition-colors">+91 74118 19757</a>
               </li>
               <li className="flex gap-3 items-center">
                 <FaEnvelope className="text-accent shrink-0" />
-                <span>info@nadabrahmaacademy.com</span>
+                <span>info@sriRAHAmantara.com</span>
               </li>
             </ul>
           </div>
@@ -81,7 +81,7 @@ export function Footer({ onOpenContact }: FooterProps) {
           {/* Map */}
           <div className="md:col-span-3 h-48 rounded-xl overflow-hidden border-2 border-white/10 relative">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.5826998782414!2d80.2443!3d13.0617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266155694c92b%3A0x6b2ab87019f20e8b!2sMusic%20Academy!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              src="https://maps.google.com/maps?q=Building+No+108/4+North+Car+Street+Thiruvanaikoil+Trichy+620005&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -95,7 +95,7 @@ export function Footer({ onOpenContact }: FooterProps) {
         </div>
 
         <div className="mt-8 flex flex-col md:flex-row items-center justify-between text-xs text-white/50">
-          <p>&copy; {new Date().getFullYear()} Nada Brahma Music Academy. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} SRI RAHAMANTARA Music Academy. All rights reserved.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>

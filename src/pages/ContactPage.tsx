@@ -3,27 +3,28 @@ import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import { PageLayout } from "@/components/PageLayout";
 import { PageHero } from "@/components/PageHero";
+import { useSEO } from "@/hooks/useSEO";
 
 const contactInfo = [
   {
     Icon: MapPin,
     label: "Address",
-    value: "Near Thiruvanaikovil Temple, Thiruvanaikoil, Tiruchirappalli, Tamil Nadu 620005",
+    value: "Building No.108/4, Near Akilandeshwari Kovil,\nNorth Car Street, Thiruvanaikoil,\nTrichy - 620005, Tamil Nadu",
   },
   {
     Icon: Phone,
     label: "Phone",
-    value: "+91 98765 43210",
+    value: "+91 74118 19757",
   },
   {
     Icon: Mail,
     label: "Email",
-    value: "info@nadabrahmaacademy.com",
+    value: "info@sriRAHAmantara.com",
   },
   {
     Icon: Clock,
     label: "Class Hours",
-    value: "Mon – Sat: 7:00 AM – 8:00 PM\nSunday: 9:00 AM – 1:00 PM",
+    value: "Mon – Sun: 7:00 AM – 9:00 PM",
   },
 ];
 
@@ -39,6 +40,10 @@ const courses = [
 ];
 
 export default function ContactPage() {
+  useSEO({
+    title: "Contact Us — Admissions & Enquiries",
+    description: "Get in touch with Sri Rahamantara Music Academy for admissions, course enquiries, or to schedule a trial class. Located in Thiruvanaikoil, Trichy.",
+  });
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -108,7 +113,7 @@ export default function ContactPage() {
             >
               <iframe
                 title="Academy Location"
-                src="https://maps.google.com/maps?q=Thiruvanaikovil+Temple,+Tiruchirappalli,+Tamil+Nadu&output=embed"
+                src="https://maps.google.com/maps?q=Building+No+108/4+North+Car+Street+Thiruvanaikoil+Trichy+620005&output=embed"
                 width="100%"
                 height="220"
                 className="border-0 block"

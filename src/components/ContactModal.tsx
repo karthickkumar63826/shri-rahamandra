@@ -4,11 +4,10 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { X } from "lucide-react";
-import { FaCheckCircle, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { FaCheckCircle } from "react-icons/fa";
 import * as Dialog from "@radix-ui/react-dialog";
 
-const WEBHOOK_URL =
-  "https://script.google.com/macros/s/AKfycbzZFyqd_EUDwtHGIlC_gzhqHpejnYXcr3Y7Cuz-dEDJ0l-g9hTAWHIDs-ciiIjgIZGH/exec";
+const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbw3GDGjsnz1Ma7sNW3byPm4jIsQb9RbafHUwQDv1eBsD9UHLcet1uHG3xOyy3AAj5g-/exec";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -86,57 +85,15 @@ export function ContactModal({ open, onOpenChange }: ContactModalProps) {
             className="fixed inset-0 z-50 flex items-center justify-center p-4"
             onClick={(e) => e.target === e.currentTarget && onOpenChange(false)}
           >
-            <div className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl grid grid-cols-1 md:grid-cols-12">
+            <div className="relative w-full max-w-xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl ">
 
               {/* Close button */}
-              <Dialog.Close className="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors">
-                <X className="h-5 w-5" />
+              <Dialog.Close className="absolute top-4 right-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-white/10 ">
+                <X className="text-gray-900 h-5 w-5" />
               </Dialog.Close>
 
-              {/* Left info panel */}
-              <div className="bg-primary p-8 md:p-10 md:col-span-5 text-primary-foreground flex flex-col justify-between gap-8 rounded-t-3xl md:rounded-l-3xl md:rounded-tr-none">
-                <div>
-                  <Dialog.Title className="text-3xl font-bold mb-3">
-                    Enroll Now
-                  </Dialog.Title>
-                  <Dialog.Description className="text-primary-foreground/80 leading-relaxed text-sm">
-                    Take the first step towards mastering classical music. Fill out the form and our admissions team will contact you shortly to schedule an orientation.
-                  </Dialog.Description>
-                </div>
-
-                <div className="space-y-5">
-                  <div>
-                    <h4 className="font-bold text-accent text-sm mb-1">Audition Requirements</h4>
-                    <p className="text-xs text-primary-foreground/75 leading-relaxed">
-                      Beginners do not require an audition. Intermediate and advanced students will have a brief assessment.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-accent text-sm mb-1">Term Details</h4>
-                    <p className="text-xs text-primary-foreground/75 leading-relaxed">
-                      Next academic term begins in 3 weeks. Classes are held bi-weekly.
-                    </p>
-                  </div>
-                </div>
-
-                <ul className="space-y-3 text-sm text-primary-foreground/70">
-                  <li className="flex items-start gap-2">
-                    <FaMapMarkerAlt className="text-accent shrink-0 mt-0.5" />
-                    <span>123 Music Street, Cultural District, Chennai – 600001</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaPhoneAlt className="text-accent shrink-0" />
-                    <span>+91 98765 43210</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaEnvelope className="text-accent shrink-0" />
-                    <span>info@nadabrahmaacademy.com</span>
-                  </li>
-                </ul>
-              </div>
-
               {/* Right form panel */}
-              <div className="bg-card p-8 md:p-10 md:col-span-7 relative min-h-[480px] rounded-b-3xl md:rounded-r-3xl md:rounded-bl-none">
+              <div className="bg-card p-8 md:p-10   rounded-b-3xl md:rounded-r-3xl md:rounded-bl-none">
                 <AnimatePresence mode="wait">
                   {isSuccess ? (
                     <motion.div

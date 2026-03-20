@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Music, Sparkles, Drum, Palette, BrainCircuit, Globe, Award, Users, GraduationCap, CalendarDays } from "lucide-react";
+import { Music, Sparkles, Drum, Palette, BrainCircuit, Globe } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 
 const courses = [
@@ -35,12 +35,6 @@ const courses = [
   },
 ];
 
-const stats = [
-  { Icon: CalendarDays, value: "17+", label: "Years of Excellence" },
-  { Icon: Users, value: "2,400+", label: "Students Trained" },
-  { Icon: Award, value: "100+", label: "Awards Won" },
-  { Icon: GraduationCap, value: "100%", label: "Exam Pass Rate" },
-];
 
 const containerVariants = {
   hidden: {},
@@ -62,27 +56,7 @@ export function About() {
         description="Where the Five Elements meet Fine Arts — a sanctuary where tradition flows like the sacred springs of the Kaveri."
       />
 
-      {/* ── Stats Row ────────────────────────────────────────── */}
-      <div className="bg-accent">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-primary/20">
-            {stats.map(({ Icon, value, label }, i) => (
-              <motion.div
-                key={label}
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="flex flex-col items-center gap-2 py-8 px-4 text-primary"
-              >
-                <Icon className="h-5 w-5 opacity-70 mb-1" strokeWidth={1.5} />
-                <span className="text-3xl font-bold">{value}</span>
-                <span className="text-xs font-semibold uppercase tracking-widest opacity-70">{label}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
+
 
       {/* ── Story Section ─────────────────────────────────────── */}
       <div className="mx-auto max-w-7xl px-6 py-24">
@@ -100,7 +74,7 @@ export function About() {
             <div className="absolute -left-5 -top-5 h-full w-full rounded-3xl border-2 border-accent/40 z-0" />
             <div className="relative z-10 overflow-hidden rounded-3xl shadow-2xl">
               <img
-                src="https://pixabay.com/get/g3fd38336b7fdf2b554c9d94dd3a016b30b68c421feaf8b3a605ee7af4dc6f7d10998d41caa488e290008c51b45fda6e1c6e6756559f187cee8c4af5b40ad41b0_1280.jpg"
+                src={`/images/banner.jpg`}
                 alt="Classical Music Performance"
                 className="w-full h-[480px] object-cover transition-transform duration-700 hover:scale-105"
               />

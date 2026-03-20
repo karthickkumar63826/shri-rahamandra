@@ -8,7 +8,7 @@ const navLinks = [
   { name: "About", href: "/about" },
   { name: "Gurus", href: "/gurus" },
   { name: "Gallery", href: "/gallery" },
-  { name: "Workshops", href: "/workshops" },
+  { name: "Workshops", href: "/workshopss" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -38,26 +38,24 @@ export function Navbar({ onEnroll }: NavbarProps) {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        scrolled
-          ? "bg-background/95 py-3 shadow-md backdrop-blur-md border-b border-border/60"
-          : "bg-primary/95 py-4 backdrop-blur-sm border-b border-white/10"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled
+        ? "bg-background/95 py-3 shadow-md backdrop-blur-md border-b border-border/60"
+        : "bg-primary/95 py-4 backdrop-blur-sm border-b border-white/10"
+        }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className={`flex h-10 w-10 items-center justify-center rounded-full shadow-lg transition-all group-hover:scale-105 ${
-            scrolled ? "bg-primary text-accent" : "bg-accent text-primary"
-          }`}>
-            <span className="text-xl italic font-bold">N</span>
+          <div className={`flex h-10 w-10 items-center justify-center rounded-full shadow-lg transition-all group-hover:scale-105 ${scrolled ? "bg-primary text-accent" : "bg-accent text-primary"
+            }`}>
+            <img src={`/favicon.webp`}
+              alt="logo" className="rounded-full" />
           </div>
           <div className="flex flex-col">
-            <span className={`text-base font-bold leading-none tracking-tight transition-colors ${
-              scrolled ? "text-foreground" : "text-primary-foreground"
-            }`}>
-              Nada Brahma
+            <span className={`text-base font-bold leading-none tracking-tight transition-colors ${scrolled ? "text-foreground" : "text-primary-foreground"
+              }`}>
+              SRI RAHAMANTARA
             </span>
             <span className="text-[0.6rem] font-semibold uppercase tracking-widest text-accent">
               Music Academy
@@ -66,7 +64,7 @@ export function Navbar({ onEnroll }: NavbarProps) {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:block">
+        <nav className="hidden lg:block">
           <ul className="flex items-center gap-7">
             {navLinks.map((link) => {
               const isActive =
@@ -93,14 +91,13 @@ export function Navbar({ onEnroll }: NavbarProps) {
         </nav>
 
         {/* Enroll Button Desktop */}
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <button
             onClick={onEnroll}
-            className={`rounded-full px-6 py-2.5 text-sm font-semibold shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-xl ${
-              scrolled
-                ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                : "bg-accent text-primary hover:bg-accent/90"
-            }`}
+            className={`rounded-full px-6 py-2.5 text-sm font-semibold shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-xl ${scrolled
+              ? "bg-primary text-primary-foreground hover:bg-primary/90"
+              : "bg-accent text-primary hover:bg-accent/90"
+              }`}
           >
             Enroll Now
           </button>
@@ -108,7 +105,7 @@ export function Navbar({ onEnroll }: NavbarProps) {
 
         {/* Mobile Menu Toggle */}
         <button
-          className={`p-2 md:hidden transition-colors ${scrolled ? "text-foreground" : "text-primary-foreground"}`}
+          className={`p-2 lg:hidden transition-colors ${scrolled ? "text-foreground" : "text-primary-foreground"}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -123,7 +120,7 @@ export function Navbar({ onEnroll }: NavbarProps) {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="border-t border-white/10 bg-primary/98 backdrop-blur-md md:hidden"
+            className="border-t border-white/10 bg-primary/98 backdrop-blur-md lg:hidden"
           >
             <ul className="flex flex-col px-6 py-5 space-y-4">
               {navLinks.map((link) => {
@@ -133,9 +130,8 @@ export function Navbar({ onEnroll }: NavbarProps) {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className={`block text-base font-medium transition-colors ${
-                        isActive ? "text-accent" : "text-primary-foreground/80 hover:text-accent"
-                      }`}
+                      className={`block text-base font-medium transition-colors ${isActive ? "text-accent" : "text-primary-foreground/80 hover:text-accent"
+                        }`}
                     >
                       {link.name}
                     </Link>

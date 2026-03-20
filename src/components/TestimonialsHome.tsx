@@ -3,22 +3,22 @@ import { Star, Quote } from "lucide-react";
 
 const featured = [
   {
-    name: "Ananya S.",
-    course: "Carnatic Vocal, Intermediate",
+    name: "Dr Divya Peds",
+    course: "Harmonious Learning Experience",
+    avatar: "D",
+    text: "A very dedicated and sincere teacher. Madam takes care that kids learn music and enjoy the classes as well.. homely environment and a friendly teacher.. I highly recommend.",
+  },
+  {
+    name: "Aruna Dhanasekar",
+    course: "Saraswati Veena",
     avatar: "A",
-    text: "The gurus here don't just teach notes — they transmit a feeling. My sruti purity and gamaka control improved beyond what I ever thought possible in 6 months.",
+    text: "I have been learning veenai under srividhya mam. It feels so nice to learn because of her patience and clear teaching. It is such a great place to learn veenai under srividhya mam.",
   },
   {
-    name: "Meera K.",
-    course: "Saraswati Veena, Advanced",
-    avatar: "M",
-    text: "This academy is truly a temple of learning. The masterclasses with visiting artists open up dimensions of the music I had never encountered before.",
-  },
-  {
-    name: "Rahul T.",
+    name: "Sri Sudha",
     course: "Violin, Intermediate",
-    avatar: "R",
-    text: "Modern approach, traditional values. The annual performance gave me the confidence I needed. The faculty genuinely invests in every student's growth.",
+    avatar: "S",
+    text: "I had an amazing experience in this Music Academy! The vocal coach, Mrs. Srividhya, is incredibly patient and knowledgeable. I've seen significant improvement in my singing skills, and the supportive atmosphere in class makes learning so much fun. Highly recommend this Music Academy to anyone looking to learn music or enhance their skills! 🎶",
   },
 ];
 
@@ -48,18 +48,7 @@ export function TestimonialsHome() {
               Student <span className="text-primary italic">Stories</span>
             </h2>
           </div>
-          <div className="flex items-center gap-3">
-            <div className="flex -space-x-2">
-              {["A", "M", "R", "V"].map((l) => (
-                <div key={l} className="h-9 w-9 rounded-full bg-primary flex items-center justify-center text-accent text-xs font-bold border-2 border-card">
-                  {l}
-                </div>
-              ))}
-            </div>
-            <p className="text-sm text-muted-foreground">
-              <strong className="text-foreground">2,400+</strong> students trained
-            </p>
-          </div>
+
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

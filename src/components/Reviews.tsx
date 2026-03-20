@@ -89,7 +89,7 @@ export function Reviews() {
           {[...reviews, ...reviews].map((review, idx) => (
             <div
               key={`${review.id}-${idx}`}
-              className="w-[340px] shrink-0 rounded-2xl bg-card border border-border/60 p-7 shadow-xl flex flex-col justify-between"
+              className="w-[440px] shrink-0 rounded-2xl bg-card border border-border/60 p-7 shadow-xl flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-start justify-between mb-4">

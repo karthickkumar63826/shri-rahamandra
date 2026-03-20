@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CalendarDays, MapPin, ArrowRight } from "lucide-react";
+import { MapPin, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import { useContactModal } from "@/hooks/useContactModal";
 
@@ -39,7 +39,7 @@ export function EventsPreview() {
               Upcoming <span className="italic text-accent">Events</span>
             </h2>
             <p className="text-primary-foreground/60 text-sm leading-relaxed mb-8 max-w-sm">
-              From intimate masterclasses to grand festivals — something meaningful at Nada Brahma every month.
+              From intimate masterclasses to grand festivals — something meaningful at SRI RAHAMANTARA every month.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <button

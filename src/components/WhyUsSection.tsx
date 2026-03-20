@@ -48,7 +48,7 @@ export function WhyUsSection() {
         >
           <p className="text-xs font-bold uppercase tracking-[0.3em] text-accent mb-3">Our Promise</p>
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            The Nada Brahma <span className="text-primary italic">Difference</span>
+            The SRI RAHAMANTARA <span className="text-primary italic">Difference</span>
           </h2>
           <p className="text-muted-foreground text-base leading-relaxed">
             We don't just teach music. We cultivate discipline, character and a lifelong connection to a living tradition.
