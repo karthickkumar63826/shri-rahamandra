@@ -122,7 +122,7 @@ export function Hero({ onOpenContact }: HeroProps) {
                 alt="Veena"
                 className="h-20 w-20 md:h-28 md:w-28 object-contain drop-shadow-xl"
               />
-              <span className="mt-2 text-[10px] font-bold uppercase tracking-[0.25em] text-accent">SHRI Rahamandara</span>
+              <span className="mt-2 text-[10px] font-bold uppercase tracking-[0.25em] text-accent">SRI Rahamandara</span>
             </motion.div>
 
           </div>
