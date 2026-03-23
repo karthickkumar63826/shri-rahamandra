@@ -73,7 +73,7 @@ export function Footer({ onOpenContact }: FooterProps) {
               </li>
               <li className="flex gap-3 items-center">
                 <FaEnvelope className="text-accent shrink-0" />
-                <span>info@sriRAHAmantara.com</span>
+                <span>info@srirahamantara.com</span>
               </li>
             </ul>
           </div>

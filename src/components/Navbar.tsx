@@ -73,10 +73,10 @@ export function Navbar({ onEnroll }: NavbarProps) {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className={`text-sm font-medium transition-colors relative
+                    className={`text-base font-medium transition-colors relative
                       after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:bg-accent after:transition-all
                       ${isActive
-                        ? "text-accent after:w-full"
+                        ? "text-accent "
                         : scrolled
                           ? "text-foreground/75 hover:text-accent after:w-0 hover:after:w-full"
                           : "text-primary-foreground/80 hover:text-accent after:w-0 hover:after:w-full"

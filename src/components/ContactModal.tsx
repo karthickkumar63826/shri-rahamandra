@@ -92,24 +92,44 @@ export function ContactModal({ open, onOpenChange }: ContactModalProps) {
                 <X className="text-gray-900 h-5 w-5" />
               </Dialog.Close>
 
-              {/* Right form panel */}
-              <div className="bg-card p-8 md:p-10   rounded-b-3xl md:rounded-r-3xl md:rounded-bl-none">
+              {/* Form panel */}
+              <div className="relative bg-card p-8 md:p-10 rounded-3xl">
                 <AnimatePresence mode="wait">
                   {isSuccess ? (
                     <motion.div
                       key="success"
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0 }}
-                      className="absolute inset-0 flex flex-col items-center justify-center p-10 text-center"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.4 }}
+                      className="flex flex-col items-center justify-center py-16 text-center"
                     >
-                      <FaCheckCircle className="text-5xl text-accent mb-4" />
-                      <h3 className="text-2xl font-bold text-foreground mb-2">
-                        Application Received!
-                      </h3>
-                      <p className="text-muted-foreground text-sm">
+                      {/* Animated ring + icon */}
+                      <div className="relative mb-6">
+                        <div className="h-20 w-20 rounded-full bg-accent/10 flex items-center justify-center">
+                          <div className="h-14 w-14 rounded-full bg-accent/20 flex items-center justify-center">
+                            <FaCheckCircle className="text-3xl text-accent" />
+                          </div>
+                        </div>
+                        <motion.div
+                          initial={{ scale: 0.8, opacity: 0 }}
+                          animate={{ scale: 1.3, opacity: 0 }}
+                          transition={{ duration: 1.2, repeat: Infinity, ease: "easeOut" }}
+                          className="absolute inset-0 rounded-full border-2 border-accent/40"
+                        />
+                      </div>
+
+                      <p className="text-xs font-bold uppercase tracking-[0.3em] text-accent mb-3">Success</p>
+                      <h3 className="text-2xl font-bold text-foreground mb-3">Application Received!</h3>
+                      <p className="text-muted-foreground text-sm max-w-xs leading-relaxed">
                         Thank you! Our team will reach out to you within 24 hours to discuss next steps.
                       </p>
+
+                      <div className="mt-8 flex items-center gap-3">
+                        <div className="h-1.5 w-1.5 rounded-full bg-accent animate-bounce [animation-delay:0ms]" />
+                        <div className="h-1.5 w-1.5 rounded-full bg-accent animate-bounce [animation-delay:150ms]" />
+                        <div className="h-1.5 w-1.5 rounded-full bg-accent animate-bounce [animation-delay:300ms]" />
+                      </div>
                     </motion.div>
                   ) : (
                     <motion.form

@@ -6,6 +6,7 @@ import { TestimonialsHome } from "@/components/TestimonialsHome";
 import { CTABanner } from "@/components/CTABanner";
 import { useContactModal } from "@/hooks/useContactModal";
 import { useSEO } from "@/hooks/useSEO";
+import { AwardsSection } from "@/components/AwardsSection";
 
 export default function Home() {
   const { openContact } = useContactModal();
@@ -19,6 +20,7 @@ export default function Home() {
       <Hero onOpenContact={openContact} />
       <CoursesSection />
       <WhyUsSection />
+      <AwardsSection />
       {/* <EventsPreview /> */}
       <TestimonialsHome />
       <CTABanner />
