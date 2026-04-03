@@ -5,13 +5,23 @@ import { PageHero } from "@/components/PageHero";
 const gurus = [
   {
     name: "Vidushi Lakshmi Devi",
+    role: "Senior Faculty — Bharathanatiyam",
+    instrument: "Bharathanatiyam",
+    experience: "25+ Years",
+    awards: "Sangeet Natak Akademi Award",
+    description:
+      "A torchbearer of the Veena tradition, Vidushi Lakshmi Devi trained under the legendary Vidushi Jayammal of the Karaikudi school. Her teaching blends rigorous classical technique with deep spiritual understanding, guiding students from basic swaras to complex ragam-tanam-pallavi.",
+    image: "/images/gurus/bharatham.jpeg",
+  },
+  {
+    name: "Vidushi Lakshmi Devi",
     role: "Senior Faculty — Saraswati Veena",
     instrument: "Saraswati Veena",
     experience: "25+ Years",
     awards: "Sangeet Natak Akademi Award",
     description:
       "A torchbearer of the Veena tradition, Vidushi Lakshmi Devi trained under the legendary Vidushi Jayammal of the Karaikudi school. Her teaching blends rigorous classical technique with deep spiritual understanding, guiding students from basic swaras to complex ragam-tanam-pallavi.",
-    image: "/images/gurus/veena-radhika.webp",
+    image: "/images/gurus/abacus.jpeg",
   },
   {
     name: "Vidushi Meenakshi Narayanan",
@@ -20,7 +30,8 @@ const gurus = [
     experience: "30+ Years",
     awards: "Padma Shri Nominee",
     description:
-      "With over three decades of distinguished performance and teaching experience, Vidushi Meenakshi Narayanan brings profound artistry to Carnatic vocal training. A dedicated disciple of the Semmangudi lineage, she excels in krithis, manodharma sangeetham, and mentoring students for professional arangetrams, nurturing both technical excellence and soulful expression.", image: "/images/gurus/singer.webp",
+      "With over three decades of distinguished performance and teaching experience, Vidushi Meenakshi Narayanan brings profound artistry to Carnatic vocal training. A dedicated disciple of the Semmangudi lineage, she excels in krithis, manodharma sangeetham, and mentoring students for professional arangetrams, nurturing both technical excellence and soulful expression.",
+    image: "/images/gurus/drawing.webp",
   },
   {
     name: "Vidwan Suresh Kumar",
@@ -30,7 +41,7 @@ const gurus = [
     awards: "State Best Artist Award",
     description:
       "Vidwan Suresh Kumar is celebrated for his silky bowing technique and impeccable sruti alignment. Having accompanied stalwarts on the concert circuit, he brings real-world performance insight into every lesson, nurturing students from beginner bowing to full concert accompaniment.",
-    image: "/images/gurus/violin.webp",
+    image: "/images/gurus/violin.jpeg",
   },
   {
     name: "Guru Krishnamurthy",
@@ -40,7 +51,7 @@ const gurus = [
     awards: "Laya Vadhya Ratna",
     description:
       "Guru Krishnamurthy is a master of laya and talam, trained in the Pudukkottai bani of Mridangam. His structured curriculum takes students through fundamental strokes, korvais, and advanced tani avartanam, producing percussionists who have won state and national competitions.",
-    image: "/images/gurus/mirdangam.webp",
+    image: "/images/gurus/keyboard.jpeg",
   },
 ];
 
