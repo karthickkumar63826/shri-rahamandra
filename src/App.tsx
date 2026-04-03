@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ContactModalProvider } from "@/hooks/useContactModal";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import AboutPage from "@/pages/AboutPage";
@@ -44,6 +45,7 @@ function App() {
           <ContactModalProvider>
             <ScrollToTop />
             <Router />
+            <WhatsAppButton />
           </ContactModalProvider>
         </WouterRouter>
         <Toaster />
