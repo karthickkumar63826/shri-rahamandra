@@ -135,7 +135,7 @@ export default function WorkshopsPage() {
   const { openContact } = useContactModal();
   useSEO({
     title: "Summer Mastery 2026 — Workshops & Events",
-    description: "Join Sri Rahamantara Summer Mastery 2026 — workshops in Bharatanatyam, Violin, Keyboard, Pot Painting, Abacus & Vocals. Special combo packs available.",
+    description: "Join Sri Rahamandara Summer Mastery 2026 — workshops in Bharatanatyam, Violin, Keyboard, Pot Painting, Abacus & Vocals. Special combo packs available.",
   });
 
   return (

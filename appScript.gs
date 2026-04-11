@@ -27,7 +27,7 @@ function doPost(e) {
         
         <!-- Header -->
         <div style="background:#0a1f44;padding:32px 36px;text-align:center">
-          <p style="margin:0 0 4px;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#c9a84c">Sri Ragamantara</p>
+          <p style="margin:0 0 4px;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#c9a84c">Sri Rahamandara</p>
           <h1 style="margin:0;font-size:22px;color:#ffffff;font-weight:700">New Admission Enquiry</h1>
           <p style="margin:8px 0 0;font-size:12px;color:#ffffff80">${new Date().toLocaleDateString("en-IN", { weekday: "long", year: "numeric", month: "long", day: "numeric" })}</p>
         </div>
@@ -90,7 +90,7 @@ function doPost(e) {
 
         <!-- Footer -->
         <div style="background:#0a1f44;padding:20px 36px;text-align:center">
-          <p style="margin:0;font-size:11px;color:#ffffff50;letter-spacing:1px">SRI RAGAMANTARA MUSIC ACADEMY &nbsp;·&nbsp; This is an automated notification</p>
+          <p style="margin:0;font-size:11px;color:#ffffff50;letter-spacing:1px">SRI RAHAMANDARA MUSIC ACADEMY &nbsp;·&nbsp; This is an automated notification</p>
         </div>
       </div>
     `,
@@ -99,13 +99,13 @@ function doPost(e) {
   // ── Confirmation Email to Student ─────────────────────
   MailApp.sendEmail({
     to: data.email,
-    subject: `Your Enquiry is Received — Sri Ragamantara Music Academy`,
+    subject: `Your Enquiry is Received — Sri Rahamandara Music Academy`,
     htmlBody: `
       <div style="font-family:'Georgia',serif;max-width:600px;margin:0 auto;background:#f9f6f0;border-radius:12px;overflow:hidden;border:1px solid #e8dfc8">
 
         <!-- Header -->
         <div style="background:#0a1f44;padding:32px 36px;text-align:center">
-          <p style="margin:0 0 4px;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#c9a84c">Sri Ragamantara</p>
+          <p style="margin:0 0 4px;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#c9a84c">Sri Rahamandara</p>
           <h1 style="margin:0;font-size:22px;color:#ffffff;font-weight:700">Application Received</h1>
         </div>
 
@@ -113,7 +113,7 @@ function doPost(e) {
         <div style="padding:36px">
           <p style="margin:0 0 16px;font-size:16px;color:#0a1f44;font-weight:700">Dear ${data.name},</p>
           <p style="margin:0 0 16px;font-size:14px;color:#555;line-height:1.8">
-            Thank you for your interest in joining <strong>Sri Ragamantara Music Academy</strong>. We have received your enquiry for <strong>${data.instrument}</strong> and our admissions team will get in touch with you within <strong>24–48 hours</strong>.
+            Thank you for your interest in joining <strong>Sri Rahamandara Music Academy</strong>. We have received your enquiry for <strong>${data.instrument}</strong> and our admissions team will get in touch with you within <strong>24–48 hours</strong>.
           </p>
           <p style="margin:0 0 28px;font-size:14px;color:#555;line-height:1.8">
             In the meantime, if you have any questions, feel free to reply to this email or call us directly.
@@ -131,13 +131,13 @@ function doPost(e) {
 
           <p style="margin:0;font-size:14px;color:#555;line-height:1.8">
             We look forward to welcoming you into our family of classical music learners.<br/>
-            <span style="color:#c9a84c;font-style:italic">— The Sri Ragamantara Team</span>
+            <span style="color:#c9a84c;font-style:italic">— The Sri Rahamandara Team</span>
           </p>
         </div>
 
         <!-- Footer -->
         <div style="background:#0a1f44;padding:20px 36px;text-align:center">
-          <p style="margin:0;font-size:11px;color:#ffffff50;letter-spacing:1px">SRI RAGAMANTARA MUSIC ACADEMY &nbsp;·&nbsp; Classical Music Since Tradition</p>
+          <p style="margin:0;font-size:11px;color:#ffffff50;letter-spacing:1px">SRI RAHAMANDARA MUSIC ACADEMY &nbsp;·&nbsp; Classical Music Since Tradition</p>
         </div>
       </div>
     `,

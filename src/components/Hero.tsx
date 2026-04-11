@@ -41,7 +41,7 @@ export function Hero({ onOpenContact }: HeroProps) {
               <span className="italic text-accent">  Excellence.</span>
             </h1>
             <p className="mb-10 max-w-lg text-lg text-muted-foreground mx-auto md:mx-0">
-              Join SRI RAHAMANTARA Music Academy to embark on a spiritual journey of classical music. Learn from renowned gurus and master your craft.
+              Join SRI RAHAMANDARA Music Academy to embark on a spiritual journey of classical music. Learn from renowned gurus and master your craft.
             </p>
 
             <div className="flex flex-col items-center gap-4 sm:flex-row justify-center lg:justify-start">

@@ -14,7 +14,7 @@ export default function Home() {
   const { openContact } = useContactModal();
   useSEO({
     title: "Classical Music & Dance Academy in Thiruvanaikoil",
-    description: "Sri Rahamantara Music Academy offers Carnatic vocal, Veena, Mridangam, Bharatanatyam and more in Thiruvanaikoil. Enrol today and begin your classical journey.",
+    description: "Sri Rahamandara Music Academy offers Carnatic vocal, Veena, Mridangam, Bharatanatyam and more in Thiruvanaikoil. Enrol today and begin your classical journey.",
   });
 
   return (

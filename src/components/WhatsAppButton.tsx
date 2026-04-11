@@ -1,8 +1,8 @@
 import { FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-const WHATSAPP_NUMBER = "917411819757"; // +91 74118 19757
-const WHATSAPP_MESSAGE = "Hello! I'm interested in learning more about Sri Rahamantara Music Academy.";
+const WHATSAPP_NUMBER = "+919047953210"; // +91 74118 19757
+const WHATSAPP_MESSAGE = "Hello! I'm interested in learning more about Sri Rahamandara Music Academy.";
 
 export function WhatsAppButton() {
     const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;

@@ -30,14 +30,14 @@ const contactInfo = [
     value: "Building No.108/4, Near Akilandeshwari Kovil,\nNorth Car Street, Thiruvanaikoil,\nTrichy - 620005, Tamil Nadu",
   },
   { Icon: Phone, label: "Phone", value: "+91 74118 19757" },
-  { Icon: Mail, label: "Email", value: "info@srirahamantara.com" },
+  { Icon: Mail, label: "Email", value: "info@srirahamandara.com" },
   { Icon: Clock, label: "Class Hours", value: "Mon – Sun: 7:00 AM – 9:00 PM" },
 ];
 
 export default function ContactPage() {
   useSEO({
     title: "Contact Us — Admissions & Enquiries",
-    description: "Get in touch with Sri Rahamantara Music Academy for admissions, course enquiries, or to schedule a trial class. Located in Thiruvanaikoil, Trichy.",
+    description: "Get in touch with Sri Rahamandara Music Academy for admissions, course enquiries, or to schedule a trial class. Located in Thiruvanaikoil, Trichy.",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);

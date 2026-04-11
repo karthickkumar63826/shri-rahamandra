@@ -7,7 +7,7 @@ interface SEOProps {
 
 export function useSEO({ title, description }: SEOProps) {
   useEffect(() => {
-    document.title = `${title} | Sri Rahamantara Music Academy`;
+    document.title = `${title} | Sri Rahamandara Music Academy`;
 
     const metaDesc = document.querySelector("meta[name='description']");
     if (metaDesc) metaDesc.setAttribute("content", description);

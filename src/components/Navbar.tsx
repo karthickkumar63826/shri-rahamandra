@@ -55,7 +55,7 @@ export function Navbar({ onEnroll }: NavbarProps) {
           <div className="flex flex-col">
             <span className={`text-base font-bold leading-none tracking-tight transition-colors ${scrolled ? "text-foreground" : "text-primary-foreground"
               }`}>
-              SRI RAHAMANTARA
+              SRI RAHAMANDARA
             </span>
             <span className="text-[0.6rem] font-semibold uppercase tracking-widest text-accent">
               Music Academy

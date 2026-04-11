@@ -19,7 +19,7 @@ export function Footer({ onOpenContact }: FooterProps) {
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-bold leading-none text-white">
-                  SRI RAHAMANTARA
+                  SRI RAHAMANDARA
                 </span>
                 <span className="text-[0.65rem] font-medium uppercase tracking-widest text-accent">
                   Music Academy
@@ -73,7 +73,7 @@ export function Footer({ onOpenContact }: FooterProps) {
               </li>
               <li className="flex gap-3 items-center">
                 <FaEnvelope className="text-accent shrink-0" />
-                <span>info@srirahamantara.com</span>
+                <span>info@srirahamandara.com</span>
               </li>
             </ul>
           </div>
@@ -95,7 +95,7 @@ export function Footer({ onOpenContact }: FooterProps) {
         </div>
 
         <div className="mt-8 flex flex-col md:flex-row items-center justify-between text-xs text-white/50">
-          <p>&copy; {new Date().getFullYear()} SRI RAHAMANTARA Music Academy. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} SRI RAHAMANDARA Music Academy. All rights reserved.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>

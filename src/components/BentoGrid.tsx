@@ -26,7 +26,7 @@ export function BentoGrid() {
         >
           <p className="text-xs font-bold uppercase tracking-[0.3em] text-accent mb-3">At a Glance</p>
           <h2 className="text-4xl font-bold text-foreground">
-            Why <span className="text-primary italic">SRI RAHAMANTARA?</span>
+            Why <span className="text-primary italic">SRI RAHAMANDARA?</span>
           </h2>
         </motion.div>
 
@@ -56,7 +56,7 @@ export function BentoGrid() {
                 <span className="italic text-accent">Legendary Masters</span>
               </h3>
               <p className="text-primary-foreground/70 text-base max-w-md leading-relaxed">
-                Every guru at SRI RAHAMANTARA is a practitioner with decades of stage experience, national recognition, and a deep lineage from the guru-shishya parampara.
+                Every guru at SRI RAHAMANDARA is a practitioner with decades of stage experience, national recognition, and a deep lineage from the guru-shishya parampara.
               </p>
             </div>
             <div className="relative z-10 mt-8">
