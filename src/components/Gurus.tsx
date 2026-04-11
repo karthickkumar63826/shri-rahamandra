@@ -4,54 +4,81 @@ import { PageHero } from "@/components/PageHero";
 
 const gurus = [
   {
-    name: "Vidushi Lakshmi Devi",
-    role: "Senior Faculty — Bharathanatiyam",
-    instrument: "Bharathanatiyam",
-    experience: "25+ Years",
-    awards: "Sangeet Natak Akademi Award",
+    name: "Guru Srividhya",
+    role: "Proprietor — Vocal & Veena",
+    instrument: "Vocal & Veena",
+    experience: "15+ Years",
+    awards: "Sangeetha Kala Rathna",
     description:
-      "A torchbearer of the Veena tradition, Vidushi Lakshmi Devi trained under the legendary Vidushi Jayammal of the Karaikudi school. Her teaching blends rigorous classical technique with deep spiritual understanding, guiding students from basic swaras to complex ragam-tanam-pallavi.",
-    image: "/images/gurus/bharatham.jpeg",
+      "A versatile maestro in both Vocal and Veena, Guru Srividhya is dedicated to preserving the 'Intellectual Purity' of the Carnatic tradition. Her teaching style focuses on precise Sruti alignment and the fluid Gamakas unique to the Thiruvanaikoil lineage, guiding students through the spiritual depth of every Raaga.",
+    image: "/images/gurus/srividhya.jpeg",
   },
   {
-    name: "Vidushi Lakshmi Devi",
-    role: "Senior Faculty — Saraswati Veena",
-    instrument: "Saraswati Veena",
-    experience: "25+ Years",
-    awards: "Sangeet Natak Akademi Award",
+    name: "Master Vijay Krishna Kanth",
+    role: "Lead Faculty — Keyboard",
+    instrument: "Keyboard & Western Instruments",
+    experience: "5+ Years",
+    awards: "Best Instrumentalist Award — State Level",
     description:
-      "A torchbearer of the Veena tradition, Vidushi Lakshmi Devi trained under the legendary Vidushi Jayammal of the Karaikudi school. Her teaching blends rigorous classical technique with deep spiritual understanding, guiding students from basic swaras to complex ragam-tanam-pallavi.",
-    image: "/images/gurus/abacus.jpeg",
+      "Driven by a lifelong passion that began in early childhood, Master Vijay Krishna Kanth has spent over a decade mastering the keyboard and various musical instruments. He specializes in bridging the gap between classical scales and contemporary cinema music, making complex music theory accessible and exciting for the next generation.",
+    image: "/images/gurus/keyboard.jpeg",
   },
   {
-    name: "Vidushi Meenakshi Narayanan",
-    role: "Head of Vocal — Carnatic Music",
-    instrument: "Vocal (Carnatic)",
-    experience: "30+ Years",
-    awards: "Padma Shri Nominee",
-    description:
-      "With over three decades of distinguished performance and teaching experience, Vidushi Meenakshi Narayanan brings profound artistry to Carnatic vocal training. A dedicated disciple of the Semmangudi lineage, she excels in krithis, manodharma sangeetham, and mentoring students for professional arangetrams, nurturing both technical excellence and soulful expression.",
-    image: "/images/gurus/drawing.webp",
+    name: "Swaminathan",
+    role: "Senior Faculty — Mridangam",
+    instrument: "Mridangam",
+    experience: "",
+    awards: "",
+    description: "",
+    image: "/images/gurus/mridangam.webp"
   },
+
+
   {
-    name: "Vidwan Suresh Kumar",
+    name: "Thivahar",
     role: "Faculty — Carnatic Violin",
     instrument: "Violin",
-    experience: "20+ Years",
-    awards: "State Best Artist Award",
-    description:
-      "Vidwan Suresh Kumar is celebrated for his silky bowing technique and impeccable sruti alignment. Having accompanied stalwarts on the concert circuit, he brings real-world performance insight into every lesson, nurturing students from beginner bowing to full concert accompaniment.",
+    experience: "",
+    awards: "",
+    description: "",
     image: "/images/gurus/violin.jpeg",
   },
   {
-    name: "Guru Krishnamurthy",
-    role: "Faculty — Mridangam & Percussion",
-    instrument: "Mridangam",
-    experience: "22+ Years",
-    awards: "Laya Vadhya Ratna",
-    description:
-      "Guru Krishnamurthy is a master of laya and talam, trained in the Pudukkottai bani of Mridangam. His structured curriculum takes students through fundamental strokes, korvais, and advanced tani avartanam, producing percussionists who have won state and national competitions.",
-    image: "/images/gurus/keyboard.jpeg",
+    name: "Pavithra",
+    role: "Senior Faculty — Bharathanatiyam",
+    instrument: "Bharathanatiyam",
+    experience: "",
+    awards: "",
+    description: "",
+    image: "/images/gurus/bharatham.jpeg",
+  },
+  {
+    name: "Rajesh",
+    role: "Senior Faculty — Saraswati Veena",
+    instrument: "Saraswati Veena",
+    experience: "",
+    awards: "",
+    description: "",
+    image: "/images/gurus/veenai.jpeg",
+  },
+
+  {
+    name: "Mahalakshmi",
+    role: "Drawing & Illustration Mentor",
+    instrument: "Drawing",
+    experience: "",
+    awards: "",
+    description: "",
+    image: "/images/gurus/drawing.webp"
+  },
+  {
+    name: "Rajasudha venkat",
+    role: "Senior Faculty — Abacus",
+    instrument: "Abacus",
+    experience: "",
+    awards: "",
+    description: "",
+    image: "/images/gurus/abacus.jpeg",
   },
 ];
 
@@ -118,20 +145,26 @@ export function Gurus() {
                 <p className="text-base text-muted-foreground leading-relaxed">{guru.description}</p>
 
                 <div className="flex flex-wrap gap-4 pt-2">
-                  <div className="flex items-center gap-2.5 rounded-xl border border-border bg-card px-4 py-3 shadow-sm">
-                    <Clock className="h-4 w-4 text-accent shrink-0" strokeWidth={1.5} />
-                    <div>
-                      <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Experience</p>
-                      <p className="text-sm font-semibold text-foreground">{guru.experience}</p>
+                  {guru.experience && (
+                    <div className="flex items-center gap-2.5 rounded-xl border border-border bg-card px-4 py-3 shadow-sm">
+                      <Clock className="h-4 w-4 text-accent shrink-0" strokeWidth={1.5} />
+                      <div>
+                        <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Experience</p>
+                        <p className="text-sm font-semibold text-foreground">{guru.experience}</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex items-center gap-2.5 rounded-xl border border-border bg-card px-4 py-3 shadow-sm">
-                    <Trophy className="h-4 w-4 text-accent shrink-0" strokeWidth={1.5} />
-                    <div>
-                      <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Recognition</p>
-                      <p className="text-sm font-semibold text-foreground">{guru.awards}</p>
-                    </div>
-                  </div>
+                  )}
+                  {
+                    guru.awards && (
+                      <div className="flex items-center gap-2.5 rounded-xl border border-border bg-card px-4 py-3 shadow-sm">
+                        <Trophy className="h-4 w-4 text-accent shrink-0" strokeWidth={1.5} />
+                        <div>
+                          <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Recognition</p>
+                          <p className="text-sm font-semibold text-foreground">{guru.awards}</p>
+                        </div>
+                      </div>
+                    )
+                  }
                 </div>
 
                 <div className="flex items-center gap-1 pt-1">
