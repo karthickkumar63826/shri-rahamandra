@@ -231,7 +231,7 @@ export default function WorkshopsPage() {
                 </div>
 
                 <button
-                  onClick={openContact}
+                  onClick={() => openContact(w.name)}
                   className="w-full rounded-xl bg-primary py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90 hover:-translate-y-0.5 transition-all duration-200 shadow-sm flex items-center justify-center gap-2"
                 >
                   Enrol Now <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
@@ -391,7 +391,7 @@ export default function WorkshopsPage() {
                     )}
                   </div>
                   <button
-                    onClick={openContact}
+                    onClick={() => openContact(combo.name)}
                     className={`inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5 ${combo.featured
                       ? "bg-accent text-primary hover:bg-accent/90 shadow-lg"
                       : "bg-primary text-primary-foreground hover:bg-primary/90"
@@ -434,7 +434,7 @@ export default function WorkshopsPage() {
               className="shrink-0"
             >
               <button
-                onClick={openContact}
+                onClick={() => openContact()}
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-10 py-4 text-base font-semibold text-primary-foreground shadow-xl hover:bg-primary/90 hover:-translate-y-0.5 transition-all duration-200"
               >
                 Reserve My Spot <ArrowRight className="h-5 w-5" strokeWidth={1.5} />

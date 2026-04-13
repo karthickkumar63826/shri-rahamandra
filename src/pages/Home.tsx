@@ -9,6 +9,7 @@ import { useContactModal } from "@/hooks/useContactModal";
 import { useSEO } from "@/hooks/useSEO";
 import { AwardsSection } from "@/components/AwardsSection";
 import { WorkshopBanner } from "@/components/WorkshopBanner";
+import { PopupBanner } from "@/components/PopupBanner";
 
 export default function Home() {
   const { openContact } = useContactModal();
@@ -19,6 +20,7 @@ export default function Home() {
 
   return (
     <PageLayout>
+      <PopupBanner />
       <Hero onOpenContact={openContact} />
       <CoursesSection />
       <WhyUsSection />

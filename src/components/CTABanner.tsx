@@ -32,7 +32,7 @@ export function CTABanner() {
             className="flex flex-col sm:flex-row gap-4 shrink-0"
           >
             <button
-              onClick={openContact}
+              onClick={() => openContact()}
               className="flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground shadow-xl hover:bg-primary/90 hover:-translate-y-0.5 transition-all"
             >
               Enroll Now

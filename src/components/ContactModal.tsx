@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -9,6 +9,22 @@ import * as Dialog from "@radix-ui/react-dialog";
 
 const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbw3GDGjsnz1Ma7sNW3byPm4jIsQb9RbafHUwQDv1eBsD9UHLcet1uHG3xOyy3AAj5g-/exec";
 
+
+const workshopOptions = [
+  "Bharatanatyam",
+  "Violin",
+  "Keyboard",
+  "Pot Painting",
+  "Abacus Basics",
+  "Vocals",
+  "Cultural Foundation",
+  "Modern Maestro",
+  "Creative Genius",
+  "Full Summer Immersion",
+  "General Workshop Enquiry",
+];
+
+
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
   age: z.coerce
@@ -17,8 +33,7 @@ const formSchema = z.object({
     .max(99, "Invalid age"),
   phone: z.string().min(10, "Valid phone number required"),
   email: z.string().email("Valid email required"),
-  instrument: z.string().min(1, "Please select an instrument"),
-  experience: z.string().min(1, "Please select your level"),
+  workshop: z.string().min(1, "valid workshop required"),
   message: z.string().optional(),
 });
 
@@ -27,9 +42,10 @@ type FormData = z.infer<typeof formSchema>;
 interface ContactModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
+  workshopName?: string;
 }
 
-export function ContactModal({ open, onOpenChange }: ContactModalProps) {
+export function ContactModal({ open, onOpenChange, workshopName }: ContactModalProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -41,6 +57,17 @@ export function ContactModal({ open, onOpenChange }: ContactModalProps) {
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
   });
+
+  useEffect(() => {
+    if (open) {
+      reset({
+        workshop: workshopName ?? "General Workshop Enquiry"
+      });
+    }
+    if (!open) {
+      return;
+    }
+  }, [open, workshopName, reset]);
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
@@ -207,48 +234,20 @@ export function ContactModal({ open, onOpenChange }: ContactModalProps) {
                         </div>
                       </div>
 
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                          <label className="block text-xs font-semibold text-muted-foreground mb-1 uppercase tracking-wide">
-                            Instrument *
-                          </label>
-                          <select
-                            {...register("instrument")}
-                            className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm text-foreground focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition"
-                          >
-                            <option value="">Select instrument</option>
-                            <option>Saraswati Veena</option>
-                            <option>Carnatic Vocal</option>
-                            <option>Violin</option>
-                            <option>Mridangam</option>
-                            <option>Flute</option>
-                            <option>Ghatam</option>
-                            <option>Other</option>
-                          </select>
-                          {errors.instrument && (
-                            <p className="mt-1 text-xs text-red-500">{errors.instrument.message}</p>
-                          )}
-                        </div>
+                      <div>
+                        <label content="block text-xs font-semibold text-muted-foreground mb-1 uppercase tracking-wide">Workshop / Course *</label>
+                        <select
+                          {...register("workshop")}
+                          className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm text-foreground focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition"                        >
+                          <option value="">Select workshop</option>
 
-                        <div>
-                          <label className="block text-xs font-semibold text-muted-foreground mb-1 uppercase tracking-wide">
-                            Experience Level *
-                          </label>
-                          <select
-                            {...register("experience")}
-                            className="w-full rounded-xl border border-border bg-background px-4 py-2.5 text-sm text-foreground focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition"
-                          >
-                            <option value="">Select level</option>
-                            <option>Beginner</option>
-                            <option>Intermediate</option>
-                            <option>Advanced</option>
-                          </select>
-                          {errors.experience && (
-                            <p className="mt-1 text-xs text-red-500">{errors.experience.message}</p>
-                          )}
-                        </div>
+                          {workshopOptions.map((workshop) => (
+                            <option key={workshop} value={workshop}>
+                              {workshop}
+                            </option>
+                          ))}
+                        </select>
                       </div>
-
                       <div>
                         <label className="block text-xs font-semibold text-muted-foreground mb-1 uppercase tracking-wide">
                           Message (optional)

@@ -5,15 +5,25 @@ import { ZoomIn, ChevronLeft, ChevronRight } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 
 const photos = [
-  { src: "/images/banner.avif", alt: "" },
-  { src: "/images/award.avif", alt: "Academy stage during annual celebration" },
-  { src: "/images/award3.webp", alt: "Award presentation moment with dignitaries" },
-  { src: "/images/award2.webp", alt: "Students receiving recognition on stage" },
-  { src: "/images/award 4.avif", alt: "Guru honoured for outstanding contribution to music" },
-  { src: "/images/piano-class.avif", alt: "Piano class in session" },
-  { src: "/images/musical-class.avif", alt: "Students during a music learning session" },
-  { src: "/images/musical-class-2.avif", alt: "Students during a music learning session" },
-
+  { src: "/images/gallary/gallary1.jpeg", alt: "" },
+  { src: "/images/gallary/gallary2.jpeg", alt: "" },
+  { src: "/images/gallary/gallary3.jpeg", alt: "" },
+  { src: "/images/gallary/gallary4.jpeg", alt: "" },
+  { src: "/images/gallary/gallary5.jpeg", alt: "" },
+  { src: "/images/gallary/gallary6.jpeg", alt: "" },
+  { src: "/images/gallary/gallary9.jpeg", alt: "" },
+  { src: "/images/gallary/gallary7.jpeg", alt: "" },
+  { src: "/images/gallary/gallary8.jpeg", alt: "" },
+  { src: "/images/gallary/gallary10.jpeg", alt: "" },
+  { src: "/images/gallary/gallary11.jpeg", alt: "" },
+  { src: "/images/gallary/gallary12.jpeg", alt: "" },
+  { src: "/images/gallary/gallary13.jpeg", alt: "" },
+  { src: "/images/gallary/gallary14.jpeg", alt: "" },
+  { src: "/images/gallary/gallary15.jpeg", alt: "" },
+  { src: "/images/gallary/gallary16.jpeg", alt: "" },
+  { src: "/images/gallary/gallary17.jpeg", alt: "" },
+  { src: "/images/gallary/gallary18.jpeg", alt: "" },
+  { src: "/images/gallary/gallary19.jpeg", alt: "" },
 ];
 
 
@@ -62,7 +72,7 @@ export function VideoGallery() {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.07 }}
               onClick={() => openPhoto(idx)}
-              className={`group cursor-pointer overflow-hidden rounded-2xl border border-border shadow-sm hover:shadow-xl hover:border-accent/40 transition-all duration-300 ${idx === 0 ? "col-span-2 row-span-2" : idx === 2 ? "row-span-2" : ""
+              className={`group cursor-pointer overflow-hidden rounded-2xl border border-border shadow-sm hover:shadow-xl hover:border-accent/40 transition-all duration-300 ${idx === 0 ? "col-span-2 row-span-2" : idx === 2 ? "row-span-2" : idx == 6 ? "col-span-2 row-span-2" : idx == 7 ? "row-span-2" : idx == 13 ? "col-span-2 row-span-2" : ""
                 }`}
             >
               <div className="relative w-full h-full overflow-hidden">

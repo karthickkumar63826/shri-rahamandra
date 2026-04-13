@@ -29,8 +29,9 @@ const contactInfo = [
     label: "Address",
     value: "Building No.108/4, Near Akilandeshwari Kovil,\nNorth Car Street, Thiruvanaikoil,\nTrichy - 620005, Tamil Nadu",
   },
-  { Icon: Phone, label: "Phone", value: "+91 74118 19757" },
-  { Icon: Mail, label: "Email", value: "info@srirahamandara.com" },
+  { Icon: Phone, label: "Phone", value: "+91 90479 53210" },
+  { Icon: Phone, label: "Phone", value: "+91 96556 53201" },
+  { Icon: Mail, label: "Email", value: "info@srirahamandaramusic.com" },
   { Icon: Clock, label: "Class Hours", value: "Mon – Sun: 7:00 AM – 9:00 PM" },
 ];
 

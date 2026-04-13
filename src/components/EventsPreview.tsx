@@ -43,7 +43,7 @@ export function EventsPreview() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <button
-                onClick={openContact}
+                onClick={() => openContact()}
                 className="rounded-full bg-accent px-6 py-3 text-sm font-semibold text-primary hover:bg-accent/90 transition-colors shadow-lg"
               >
                 Reserve a Spot

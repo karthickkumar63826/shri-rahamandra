@@ -1,9 +1,15 @@
 RewriteEngine On
-RewriteBase /
 
-RewriteRule ^index\.html$ - [L]
+# Force HTTPS
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# React SPA fallback
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ /index.html [L]
 
-RewriteRule . /index.html [L]
+# Cache static assets
+<FilesMatch "\.(js|css|png|jpg|jpeg|gif|svg|ico|woff2?)$">
+  Header set Cache-Control "max-age=31536000, public"
+</FilesMatch>

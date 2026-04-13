@@ -12,11 +12,11 @@ export function PageLayout({ children }: PageLayoutProps) {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar onEnroll={openContact} />
+      <Navbar onEnroll={() => openContact()} />
       <main>
         {children}
       </main>
-      <Footer onOpenContact={openContact} />
+      <Footer onOpenContact={() => openContact()} />
     </div>
   );
 }

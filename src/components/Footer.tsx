@@ -15,7 +15,7 @@ export function Footer({ onOpenContact }: FooterProps) {
           <div className="md:col-span-4">
             <div className="flex items-center gap-2 mb-6">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent text-primary">
-                <span className="text-2xl italic font-bold">N</span>
+                <img src="/favicon.webp" alt="logo" />
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-bold leading-none text-white">
@@ -33,7 +33,7 @@ export function Footer({ onOpenContact }: FooterProps) {
               <a href="#" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors">
                 <FaFacebookF />
               </a>
-              <a href="#" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors">
+              <a href="https://www.instagram.com/srirahamandaramusic?igsh=MWJqbG53cjFoMjRqMA==" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors">
                 <FaInstagram />
               </a>
               <a href="#" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent hover:text-primary transition-colors">
@@ -69,11 +69,15 @@ export function Footer({ onOpenContact }: FooterProps) {
               </li>
               <li className="flex gap-3 items-center">
                 <FaPhoneAlt className="text-accent shrink-0" />
-                <a href="tel:+917411819757" className="hover:text-accent transition-colors">+91 74118 19757</a>
+                <a href="tel:+919047953210" className="hover:text-accent transition-colors">+91 90479 53210</a>
+              </li>
+              <li className="flex gap-3 items-center">
+                <FaPhoneAlt className="text-accent shrink-0" />
+                <a href="+919655653201" className="hover:text-accent transition-colors">+91 96556 53201</a>
               </li>
               <li className="flex gap-3 items-center">
                 <FaEnvelope className="text-accent shrink-0" />
-                <span>info@srirahamandara.com</span>
+                <span>info@srirahamandaramusic.com</span>
               </li>
             </ul>
           </div>
